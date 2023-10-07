@@ -1,5 +1,4 @@
 import time
-import random
 import threading
 from puzzle_board.puzzle import board, swapTiles, get_board, init_puzzle, get_random_puzzle
 

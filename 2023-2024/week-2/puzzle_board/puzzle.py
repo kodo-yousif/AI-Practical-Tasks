@@ -67,8 +67,6 @@ def board():
 				pygame.quit()
 				quit()
 
-			# if event.type == pygame.MOUSEBUTTONUP:
-			# 	swapTiles(1,1)
 
 		for i in range(row):
 			for j in range(col):
