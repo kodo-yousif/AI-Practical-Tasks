@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import pyttsx3
+import threading
 
 # Initialize text-to-speech engine
 engine = pyttsx3.init()
@@ -36,9 +37,9 @@ def identify_dominant_color(frame):
     mask_blue = cv2.inRange(hsv_frame, lower_blue, upper_blue)
 
     # Calculate the areas of red, green, and blue regions
-    area_red = cv2.countNonZero(mask_red)
-    area_green = cv2.countNonZero(mask_green)
-    area_blue = cv2.countNonZero(mask_blue)
+    area_red = np.count_nonzero(mask_red)
+    area_green = np.count_nonzero(mask_green)
+    area_blue = np.count_nonzero(mask_blue)
 
     # Determine the dominant color
     dominant_color = ""
@@ -78,7 +79,7 @@ while True:
     # Check for the key to announce the dominant color audibly
     key = cv2.waitKey(1) & 0xFF
     if key == ord('a'):
-        announce_color(dominant_color)
+        threading.Thread(target=announce_color, args=(dominant_color,)).start()
 
     # Check if the window is closed by the user to exit
     if cv2.getWindowProperty("RGB Color Detection", cv2.WND_PROP_VISIBLE) < 1:
