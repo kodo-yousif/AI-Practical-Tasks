@@ -1,3 +1,5 @@
+# Project: [2- SmartLight Sensing Display](https://github.com/kodo-yousif/AI-Practical-Tasks/tree/main/2023-2024/week-1#2--smartlight-sensing-display)
+
 import cv2
 import numpy as np
 
