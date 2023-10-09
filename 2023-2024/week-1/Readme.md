@@ -112,3 +112,33 @@ OpenCV for create video stream, mouse handlers, text overlay
 Do not use open-cv built-in parameters or functions to change the brightness
 
 <b><i>Note: Should not use libraries to perform main goals</i></b>
+
+# 7- Interactive Audio Feedback on Video
+Develop a program that provides auditory feedback based on the red colour intensity of hovered pixels in a live video. As the user moves the mouse over the video playing in an OpenCV window, the program should emit a beep sound. The frequency of this sound should be directly proportional to the intensity of the red colour of the pixel under the mouse cursor.
+
+## Requirements:
+   - The program must emit a sound whose frequency is determined by the red value of the pixel under the mouse cursor
+   - The sound should change as the user moves the mouse, reflecting the red value of the current pixel under the mouse.
+   - No sound should be emitted if the red value of the pixel under the mouse cursor is zero.
+   - Emit a sound at the maximum frequency when the mouse is over a pixel with a full red value.
+   - Show a text on the video indicating the red value
+
+## Tools/Libraries Suggested:
+- Python for coding
+- OpenCV for create video stream, mouse handlers, text overlay
+- PyAudio For generating the beep sounds based on the red value of pixels.(Optional)
+- You can use another audio library Approved by supervisor
+
+<b><i>Note: Should not use libraries to perform main goals</i></b>
+
+## Folder Structure
+
+If you plan to submit your assignment using GitHub, please consider following the folder structure as mentioned below.
+week-1/
+├─ group_a/
+│ ├─ presentation/
+│ │ ├─ project_name.pptx
+│ ├─ app.py
+
+You have to include your project number and the project name as a comment in the top of your `app.py` file
+and link it to the readme file for example: [1- RGB Color Detection](https://github.com/kodo-yousif/AI-Practical-Tasks/tree/main/2023-2024/week-1#1--rgb-color-detection)
