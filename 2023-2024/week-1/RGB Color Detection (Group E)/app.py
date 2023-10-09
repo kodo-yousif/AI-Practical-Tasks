@@ -10,10 +10,12 @@ camera = cv2.VideoCapture(0)
 camera.set(3, 1920)  # Set width in pixels
 camera.set(4, 1080)  # Set height in pixels
 
+
 # Function to announce the detected color
 def announce_color(color):
     engine.say(f"The dominant color is {color}")
     engine.runAndWait()
+
 
 # Function to identify the dominant color in an image
 def identify_dominant_color(frame):
@@ -51,33 +53,56 @@ def identify_dominant_color(frame):
 
     return dominant_color
 
+
 while True:
     ret, frame = camera.read()
 
-    if not ret: break
+    if not ret:
+        break
 
     # Horizontally flip the mirrored camera
     frame = cv2.flip(frame, 1)
-    
+
     # Identify the dominant color
     dominant_color = identify_dominant_color(frame)
 
     # Display the dominant color via text on the screen
     if dominant_color == "red":
-        cv2.putText(frame, "Dominant Color: Red", (10, 30),
-                    cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
+        cv2.putText(
+            frame,
+            "Dominant Color: Red",
+            (10, 30),
+            cv2.FONT_HERSHEY_COMPLEX,
+            1,
+            (0, 0, 255),
+            2,
+        )
     elif dominant_color == "green":
-        cv2.putText(frame, "Dominant Color: Green", (10, 30),
-                    cv2.FONT_HERSHEY_COMPLEX, 1, (0, 200, 0), 2)
+        cv2.putText(
+            frame,
+            "Dominant Color: Green",
+            (10, 30),
+            cv2.FONT_HERSHEY_COMPLEX,
+            1,
+            (0, 200, 0),
+            2,
+        )
     elif dominant_color == "blue":
-        cv2.putText(frame, "Dominant Color: Blue", (10, 30),
-                    cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 2)
+        cv2.putText(
+            frame,
+            "Dominant Color: Blue",
+            (10, 30),
+            cv2.FONT_HERSHEY_COMPLEX,
+            1,
+            (255, 0, 0),
+            2,
+        )
 
     cv2.imshow("RGB Color Detection", frame)
 
     # Check for the key to announce the dominant color audibly
     key = cv2.waitKey(1) & 0xFF
-    if key == ord('a'):
+    if key == ord("a"):
         announce_color(dominant_color)
 
     # Check if the window is closed by the user to exit

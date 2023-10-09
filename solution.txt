@@ -1,0 +1,4 @@
+Initial board:
+3  5  0
+8  4  7
+1  6  2

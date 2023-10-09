@@ -26,6 +26,8 @@ def beep_alarm():
         print("ALARM")
         winsound.Beep(2500, 1000)
     alarm = False
+
+
 while True:
     _, frame = cap.read()
     frame = imutils.resize(frame, width=500)
@@ -33,9 +35,9 @@ while True:
         frame_bw = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY).astype(np.int32)
         threshold = np.zeros_like(frame_bw)
         difference = np.abs(frame_bw - start_frame)
-        mask=difference>25
+        mask = difference > 25
         threshold = np.where(mask, 255, 0)
-     
+
         start_frame = frame_bw
         if threshold.sum() > 600:
             alarm_counter += 1
@@ -51,7 +53,7 @@ while True:
         if not alarm:
             alarm = True
             threading.Thread(target=beep_alarm).start()
-   
+
     key_pressed = cv2.waitKey(30)
     if key_pressed == ord("t"):
         alarm_mode = not alarm_mode
