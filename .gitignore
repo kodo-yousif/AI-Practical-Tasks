@@ -161,3 +161,6 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+MangoLeafBD Dataset
+mahotas-1.4.12-cp311-cp311-win_amd64.whl
+features.csv
