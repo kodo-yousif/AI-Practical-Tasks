@@ -1,0 +1,8 @@
+numpy
+pandas
+matplotlib
+opencv-python
+'2023-2024\final\Group D\mahotas-1.4.12-cp311-cp311-win_amd64.whl'
+tqdm
+scikit-image      
+scikit-learn

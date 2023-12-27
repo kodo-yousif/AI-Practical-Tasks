@@ -155,12 +155,15 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# group D files and dirs
+MangoLeafBD Dataset
+mahotas-1.4.12-cp311-cp311-win_amd64.whl
+features.csv
+efficientnet-v2.ipynb
+
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
-MangoLeafBD Dataset
-mahotas-1.4.12-cp311-cp311-win_amd64.whl
-features.csv
