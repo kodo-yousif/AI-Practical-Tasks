@@ -157,6 +157,7 @@ cython_debug/
 
 # group D files and dirs
 MangoLeafBD Dataset
+features
 mahotas-1.4.12-cp311-cp311-win_amd64.whl
 features.csv
 efficientnet-v2.ipynb
