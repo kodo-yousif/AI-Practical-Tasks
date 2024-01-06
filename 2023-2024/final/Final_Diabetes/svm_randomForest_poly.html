@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandomForest Feature Selection Results</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>RandomForest Feature Selection Results-poly</h1>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Number of Features</th>
+      <th>Selected Features</th>
+      <th>Accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>[BloodPressure, DiabetesPedigreeFunction, Age, BMI, Glucose]</td>
+      <td>0.761905</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>[Pregnancies, BloodPressure, DiabetesPedigreeFunction, Age, BMI, Glucose]</td>
+      <td>0.761905</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>[DiabetesPedigreeFunction, Age, BMI, Glucose]</td>
+      <td>0.757576</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>[Age, BMI, Glucose]</td>
+      <td>0.748918</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>[SkinThickness, Insulin, Pregnancies, BloodPressure, DiabetesPedigreeFunction, Age, BMI, Glucose]</td>
+      <td>0.748918</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>[Insulin, Pregnancies, BloodPressure, DiabetesPedigreeFunction, Age, BMI, Glucose]</td>
+      <td>0.744589</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>[BMI, Glucose]</td>
+      <td>0.740260</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>[Glucose]</td>
+      <td>0.727273</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
