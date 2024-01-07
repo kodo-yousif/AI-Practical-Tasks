@@ -155,6 +155,11 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# group D files and dirs
+MangoLeafBD Dataset
+features
+my_model_weights_v2l.h5
+
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
