@@ -158,8 +158,7 @@ cython_debug/
 # group D files and dirs
 MangoLeafBD Dataset
 features
-mahotas-1.4.12-cp311-cp311-win_amd64.whl
-features.csv
+my_model_weights_v2l.h5
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
