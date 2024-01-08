@@ -15,6 +15,10 @@ body{
     background-color: #222;
     width: 50vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .lft-btns , .rt-btns{
@@ -127,18 +131,20 @@ input:focus + label {
 /* end of left buttons */
 
 .calculated-table{
-    width: 50vw;
+    width: 100%;
     height: 90vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    overflow-x: scroll;
+  }
+
+.calculated-table::-webkit-scrollbar {
+  display: none;
 }
 
 table{
     background-color: grey;
-    width: 40vw;
-    height: 60vh;
     text-align: center;
 }
 
